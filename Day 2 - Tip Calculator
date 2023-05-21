@@ -1,0 +1,22 @@
+#Welcome message
+print("Welcome to the tip calculator.")
+
+# Input for the total bill
+billed = float(input("What was the total bill? \n$"))
+
+# Input for percentage of tip given
+tipped = int(input("What percentage tip would you like to give? 10, 12, or 15? \n"))
+
+# Check if tipped amount is valid
+while tipped not in [10, 12, 15]:
+    print("Invalid tip amount. Only input 10, 12 or 15")
+    tipped = int(input("What percentage tip would you like to give? 10, 12, or 15? \n"))
+
+# Number of people to split the bill by
+people = int(input("How many people to split the bill? \n"))
+
+# Calculate the amount due per person
+split_bill = billed * (1 + (tipped / 100)) / people
+final_bill = round(split_bill, 2)
+
+print(f"Each person should pay: ${final_bill}")
