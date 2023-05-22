@@ -1,0 +1,62 @@
+# Imports random module to randomise the computer's response
+import random
+
+# ascii art for rock
+rock ="""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+# ascii art for paper
+paper ="""
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+# ascii art for scissors
+scissors ="""
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+
+# Prompt for player to choose their move
+player = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+
+# Computes the computer's move
+computer = random.randint(0,2)
+
+if player == 0:
+  print(rock)
+elif player == 1:
+  print(paper)
+else:
+  print(scissors)
+
+print("\nComputer chose: \n")
+if computer == 0:
+  print(rock)
+elif computer == 1:
+  print(paper)
+else:
+  print(scissors)
+  
+result = player - computer 
+
+if result == 0:
+  print("It's a tie.")
+elif result in [-1, 2]:
+  print("You lose.")
+elif result in [-2, 1]:
+  print("You win!")
