@@ -1,0 +1,49 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+# The first choice made by the player
+choice1 = input("As you disembark from your speedboat, you start to venture deeper into the island. \n\nEventually, you reach a crossroad. Do you turn left or right?\n")
+
+# Second scene.
+if choice1.lower() == 'right':
+    choice2 = input("You turn right.\n\nAs you follow down the beaten path, you can't help but feel the anticipation swelling from within you. Eventually, you reach a body of water that seems to span several meters into the horizon. You see a battered wooden boat in the corner of your eye. Do you take the boat or try to swim across? Respond with boat or swim.")
+    if choice2.lower() == 'boat':
+        print("As you enter the boat, you see a large shadowy figure beneath the surface of the water. You begin to paddle, with increasing urgency as the shadow draws closer. Across the horizon, you could see land; as if recharged by a newfound determination, you reach the shore.")
+        print("After landing ashore, you find yourself standing in front of three stone doors. The doors are intriguingly colored in red, blue, and yellow. Each door seems to hold a mystery of its own.")
+        choice3 = input("Which door do you choose to open? Red, blue, or yellow?\n")
+        if choice3.lower() == "red":
+            print("You open the red door and find yourself engulfed in flames. The room is filled with scorching heat, and before you can react, the intense fire consumes you. Game over.")
+        elif choice3.lower() == "blue":
+            print("You open the blue door and a gust of icy wind rushes out. The room is freezing cold, and you start to shiver uncontrollably. Unable to withstand the extreme cold, you collapse and lose consciousness. Game over.")
+        elif choice3.lower() == "yellow":
+            print("You open the yellow door and are greeted by a room filled with treasure. Gold coins, sparkling gems, and precious artifacts surround you. Congratulations! You have found the treasure and successfully completed your mission!")
+        else:
+            print("You hesitate in front of the doors and fail to make a choice. Time passes, and you remain stuck in indecision. The opportunity slips away, and you never find the treasure. Game over.")
+    else:
+        print("You chose poorly. The ground beneath you rumbles and you hear a loud splash as a monstrous figure leaps out from the water, 20 meters into the air. You barely move from your spot as the boulder-sized trout crashes back into you, killing you instantly. \n\nGame over.")
+else:
+    print("As you turn your body to continue your journey, your knees buckle. Confused, you look down as you realize the ground beneath you is falling into itself. In mere seconds, you too are swallowed into the dark abyss, never to see the light of day again. Above you, the ground has seemingly repaired itself, giving away no hint of what had previously transpired.\n\nGame over.")
+
+print("\nThank you for playing Treasure Island!")
